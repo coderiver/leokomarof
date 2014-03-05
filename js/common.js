@@ -2,8 +2,8 @@ $(document).ready(function() {
 
 wnd = $(window);
 
+//fancybox
 var fbox = $('.fancybox-media, .fancybox-img');
-
 if (fbox.length) {
 	fbox.fancybox({
 		openEffect  : 'elastic',
@@ -97,7 +97,7 @@ function order () {
 		item.removeClass('is-active');
 		$(this).addClass('is-active');
 	}, function(){
-		$(this).find('.order__item-in').removeClass('is-flipped');
+		//$(this).find('.order__item-in').removeClass('is-flipped');
 	});
 	go.on('click', function(){
 		$(this).parents('.order__item-in').addClass('is-flipped');
@@ -111,10 +111,8 @@ function order () {
 		var h = $(this).height(); 
 		max = h > max ? h : max;
 	})
-	if (max > min) {
-		info.height(max);
-		form.height(max);
-	};
+	info.height(max);
+	form.height(max);
 }
 order();
 
