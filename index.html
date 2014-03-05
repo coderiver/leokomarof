@@ -6,17 +6,546 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.fancybox-media.js"></script>
+	<script src="js/cycle.js"></script>
+	<script src="js/jquery.cycle2.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
-
-<!-- BEGIN  out-->
-<div class="out">
-
+<div class="wrapper">
+	<!-- page 1 -->
+	<div class="page">
+		<div class="l-center">
+			<div class="page__in js-page" style="background-image: url(img/leo.png)">
+				<div class="header">
+					<nav class="nav js-nav">
+						<ul>
+							<li><a href="#page-1">Фото</a></li>
+							<li><a href="#page-2">Видео</a></li>
+							<li><a href="#page-3">Био</a></li>
+							<li><a href="#page-4">Услуги и цены</a></li>
+							<li><a href="#page-5">Контакт</a></li>
+						</ul>
+					</nav>
+					<ul class="lang">
+						<li class="is-active"><a href="#">Рус</a></li>
+						<li><a href="#">Est</a></li>
+						<li><a href="#">Eng</a></li>
+					</ul>
+				</div>
+				<div class="leo">
+					<div class="leo__name">Leo Komarof</div>
+					<div class="leo__profession">Фотограф / видеооператор</div>
+					<div class="leo__description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</div>
+				</div>
+				<ul class="contacts-info">
+					<li>+372 56 94 52 07</li>
+					<li>+380 50 904 85 05</li>
+					<li><a href="mailto:leo@komaroff.eu">leo@komaroff.eu</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- page 2 -->
+	<div id="page-1" class="page js-page">
+		<div class="tabs js-tabs">
+			<ul class="tabs__nav">
+				<li class="is-active"><a href="tabs-item-01">Свадьбы</a></li>
+				<li><a href="tabs-item-02">Портреты</a></li>
+				<li><a href="tabs-item-03">Семейные фото</a></li>
+			</ul>
+			<div class="tabs__container">
+				<div id="tabs-item-01" class="tabs__item">
+					<div class="slider js-sl">
+						<div class="l-center">
+							<button class="slider__prev"><i></i></button>
+							<button class="slider__next"><i></i></button>
+							<div class="slider__in">
+								<a href="img/slide1.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/slide1.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/slide1.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tabs-item-02" class="tabs__item">
+					<div class="slider js-sl">
+						<div class="l-center">
+							<button class="slider__prev"><i></i></button>
+							<button class="slider__next"><i></i></button>
+							<div class="slider__in">
+								<a href="img/slide1.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/slide1.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/slide1.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tabs-item-03" class="tabs__item">
+					<div class="slider js-sl">
+						<div class="l-center">
+							<button class="slider__prev"><i></i></button>
+							<button class="slider__next"><i></i></button>
+							<div class="slider__in">
+								<a href="img/slide1.jpg" rel="slider-3" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/slide1.jpg" rel="slider-3" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/slide1.jpg" rel="slider-3" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- page 3 -->
+	<div id="page-2" class="page js-page">
+		<div class="tabs js-tabs">
+			<ul class="tabs__nav">
+				<li class="is-active"><a href="tabs-item-11">Свадьбы</a></li>
+				<li><a href="tabs-item-12">Рекламные ролики</a></li>
+				<li><a href="tabs-item-13">Клипы</a></li>
+			</ul>
+			<div class="tabs__container">
+				<div id="tabs-item-11" class="tabs__item">
+					<div class="slider js-sl">
+						<div class="l-center">
+							<button class="slider__prev"><i></i></button>
+							<button class="slider__next"><i></i></button>
+							<div class="slider__in">            
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" rel="video-group-1" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tabs-item-12" class="tabs__item">
+					<div class="slider js-sl">
+						<div class="l-center">
+							<button class="slider__prev"><i></i></button>
+							<button class="slider__next"><i></i></button>
+							<div class="slider__in">            
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tabs-item-13" class="tabs__item">
+					<div class="slider js-sl">
+						<div class="l-center">
+							<button class="slider__prev"><i></i></button>
+							<button class="slider__next"><i></i></button>
+							<div class="slider__in">            
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+								<div class="slider__item js-sl">
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_1 fancybox-media" style="background-image: url(img/slide-block-pic-1.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_2 fancybox-media" style="background-image: url(img/slide-block-pic-2.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_3 fancybox-media" style="background-image: url(img/slide-block-pic-3.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+									<a href="http://vimeo.com/36031564" class="slider__block slider__block_4 fancybox-media" style="background-image: url(img/slide-block-pic-4.png)">
+										<div class="slider__desc">
+											<div class="slider__title">Свадьба Маши и паши</div>
+											<div class="slider__place">Украина, 2013г.</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- page 4 -->
+	<div id="page-3" class="page" style="background-image: url(img/about-bg.jpg)">
+		<div class="l-center l-center_about">
+			<div class="page__in js-page">
+				<div class="about">
+					<div class="about__name">Leo Komarof</div>
+					<ul class="about__profession">
+						<li>Фотограф</li>
+						<li>видеооператор</li>
+					</ul>
+					<div class="about__desc">
+						<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+						<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc.</p>
+					</div>
+					<ul class="social">
+						<li><a class="social__fb" href="#"></a></li>
+						<li><a class="social__vk" href="#"></a></li>
+						<li><a class="social__tw" href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- page 5 -->
+	<div id="page-4" class="page page_order">
+		<div class="l-center">
+			<div class="page__in js-page">
+				<div class="order js-order">
+					<div class="order__title">Услуги фото и видеосъемки</div>
+					<div class="order__list">
+						<div class="order__item">
+							<div class="order__type">Студийная съемка</div>
+							<div class="order__info">
+								<div class="order__content">
+									<ul>
+										<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
+										<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+										<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+									</ul>
+									<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
+									<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+								</div>
+								<div class="order__price">Стоимость: 500€</div>
+							</div>
+							<div class="order__form">
+								<button class="order__form-close"></button>
+								<div class="field">
+									<input type="text" placeholder="Ваше имя:">
+								</div>
+								<div class="field">
+									<input type="text" placeholder="Номер телефона или e-mail:">
+								</div>
+								<div class="field">
+									<textarea placeholder="Комментарии к заказу..."></textarea>
+								</div>
+								<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
+							</div>
+							<div class="order__btn">
+								<button class="order__btn-go">Заказать</button>
+								<button class="order__btn-send">Отправить </button>
+							</div>
+						</div>
+						<div class="order__item is-active">
+							<div class="order__type">ПОлный свадебный день</div>
+							<div class="order__info">
+								<div class="order__content">
+									<ul>
+										<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
+										<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+										<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+									</ul>
+									<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
+									<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+								</div>
+								<div class="order__price">Стоимость: 500€</div>
+							</div>
+							<div class="order__form">
+								<button class="order__form-close"></button>
+								<div class="field is-error">
+									<input type="text" placeholder="Ваше имя:">
+									<span>Это обязательное поле!</span>
+								</div>
+								<div class="field">
+									<input type="text" placeholder="Номер телефона или e-mail:">
+								</div>
+								<div class="field">
+									<textarea placeholder="Комментарии к заказу..."></textarea>
+								</div>
+								<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
+							</div>
+							<div class="order__btn">
+								<button class="order__btn-go">Заказать</button>
+								<button class="order__btn-send">Отправить </button>
+							</div>
+						</div>
+						<div class="order__item">
+							<div class="order__type">Праздничные события</div>
+							<div class="order__info">
+								<div class="order__content">
+									<ul>
+										<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
+										<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+										<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+									</ul>
+									<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
+									<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+								</div>
+								<div class="order__price">Стоимость: 500€</div>
+							</div>
+							<div class="order__form">
+								<button class="order__form-close"></button>
+								<div class="field">
+									<input type="text" placeholder="Ваше имя:">
+								</div>
+								<div class="field">
+									<input type="text" placeholder="Номер телефона или e-mail:">
+								</div>
+								<div class="field">
+									<textarea placeholder="Комментарии к заказу..."></textarea>
+								</div>
+								<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
+							</div>
+							<div class="order__btn">
+								<button class="order__btn-go">Заказать</button>
+								<button class="order__btn-send">Отправить </button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- page 6 -->
+	<div id="page-5" class="page">
+		<div class="l-center">
+			<div class="page__in js-page">
+				<div class="contacts">
+					<div class="contacts__title">Контакт</div>
+					<ul class="contacts__list">
+						<li>
+							<ul>
+								<li>Телефон в Эстонии:</li>
+								<li>+372 56945207</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>Телефон на Украине:</li>
+								<li>+380 50 904 85 05</li>
+							</ul>
+						</li>
+						<li>
+							<ul>
+								<li>e-mail:</li>
+								<li><a href="#">leo@komarof.eu</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="social">
+						<li><a class="social__fb" href="#"></a></li>
+						<li><a class="social__vk" href="#"></a></li>
+						<li><a class="social__tw" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="copyright">Copyright 2014 Leo Komarof  Designed by <a href="#">Aprol Designs</a></div>
+			</div>
+		</div>
+	</div>
 </div>
-<!-- END out-->
-
 </body>
 </html>

@@ -39,11 +39,525 @@
 // +font(book, cytiapro-black-webfont)  
 // =book
 // 	font-family: "book",arial,sans-serif 
-	
-body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+=roboto	
+	font-family: 'Roboto', Arial, sans-serif 
+	font-weight: 100 
 
+body
+	background: url(../img/bg.png) 
+	font-size: 13px 
+	font-family: 'Roboto Condensed', Arial, sans-serif 
+	line-height: 1.4
+	color: #767676 
+a
+	text-decoration: none
+	color: #767676
+button, input, textarea
+	font-family: 'Roboto Condensed', Arial, sans-serif 
 
 // common blocks
+.l-center
+	position: relative
+	width: 1000px
+	margin: 0 auto
+.l-center_about
+	width: 400px
+.page
+	position: relative
+	+cover
+.page_order
+	background: #FFF 
+.page__in
+	position: relative
+	display: table-cell
+	width: 1000px	
+	vertical-align: middle
+	background-size: auto 100%
+	background-repeat: no-repeat 
+	background-position: 100% 0  
+
+
+.header
+	position: absolute
+	top: 0
+	left: 40px
+	right: 40px
+.nav
+	float: left
+	margin-top: 15px
+	ul, li
+		float: left
+	li
+		margin-left: 30px
+		&:first-child
+			margin: 0 
+	a
+		text-transform: uppercase
+		color: #767676 
+		font-size: 22px 
+		font-weight: 300 
+		+tr(color .2s linear)
+		&:hover
+			color: #fff 
+.lang
+	float: right
+	margin-top: 22px
+	li
+		float: left
+		margin-left: 15px
+		&:first-child
+			margin: 0
+		&.is-active
+			a
+				color: #767676 
+				cursor: default
+	a
+		+tr(color .2s linear)
+		color: #A0A0A0
+		&:hover
+			color: #fff 
+.contacts-info
+	position: absolute
+	left: 40px
+	bottom: 17px
+	li
+		float: left
+		margin-left: 17px
+		&:first-child
+			margin: 0
+	a
+		color: #A0A0A0
+		+tr(color .2s linear)
+		&:hover
+			color: #fff 
+.leo
+	width: 500px
+	padding-left: 40px
+.leo__name
+	margin-bottom: 10px
+	+roboto
+	text-transform: uppercase
+	color: #FFF
+	font-size: 72px  
+	line-height: 1
+.leo__profession
+	margin-bottom: 30px
+	text-transform: uppercase
+	font-size: 20px
+	font-weight: 300  
+.leo__description
+	max-width: 380px
+
+
+
+.tabs__nav
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	text-align: center
+	font-size: 0
+	li
+		display: inline-block
+		margin: 0 2px
+		&.is-active
+			a
+				color: #fff 
+				cursor: default
+				&:after
+					background: #01D1F6 
+	a
+		position: relative
+		display: block
+		height: 55px
+		padding: 0 13px
+		line-height: 50px
+		font-size: 22px 
+		color: #B3B3B3
+		+tr(all .2s linear)
+		text-transform: uppercase
+		font-weight: 300 
+		&:after
+			content: ""
+			position: absolute
+			bottom: 12px
+			left: 0
+			right: 0
+			height: 2px
+			+tr(background .2s linear)
+			background: transparent  
+		&:hover
+			color: #fff 
+.tabs__container
+	padding-top: 55px
+
+
+
+.slider
+	position: relative
+	overflow: hidden
+.slider__in
+	overflow: visible !important
+	.l-center
+		position: relative
+.slider__item
+	position: relative !important
+	width: 1000px
+	+cover
+.slider__prev, .slider__next
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 1000px
+	background: rgba(0,0,0,.5) 
+	z-index: 200
+	i
+		position: absolute
+		top: 50% 
+		margin-top: -48px
+		opacity: .3
+		+tr(opacity .2s linear) 
+	&:hover
+		i
+			opacity: 1
+.slider__prev
+	left: -1000px
+	i
+		right: 30px
+		+s(sl-prev)
+.slider__next
+	right: -1000px
+	i
+		left: 30px
+		+s(sl-next)
+.slider__block
+	position: absolute
+	width: 50%
+	height: 50%
+	+cover
+	cursor: pointer
+	overflow: hidden
+	+gpu
+	&:before, &:after
+		content: ""
+		position: absolute
+		opacity: 0
+	&:before
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(255,255,255,.5)
+		+tr(opacity .2s linear)  
+		z-index: 2 
+	&:after
+		top: 50%
+		left: 50%
+		margin: -55px 0 0 -30px 
+		+scale(1.5)
+		+tr(all .2s linear) 
+		+s(sl-block-arr)
+		z-index: 6 
+	&:hover
+		&:before
+			opacity: 1 
+		&:after
+			opacity: 1
+			+scale(1) 
+		.slider__desc
+			opacity: 1
+			+scale(1) 
+.slider__block_1
+	top: 0
+	left: 0
+.slider__block_2
+	top: 0
+	left: 50%
+.slider__block_3
+	top: 50%
+	left: 0
+.slider__block_4
+	top: 50%
+	left: 50%
+.slider__desc
+	position: absolute
+	right: 0
+	left: 0
+	bottom: 0
+	padding: 10px 
+	background: #FFF 	
+	+tr(all .2s linear)
+	+scale(1.5)
+	opacity: 0 
+	text-align: center
+	color: #2C2C2C 
+	z-index: 4 
+.slider__title
+	font-size: 20px
+	text-transform: uppercase
+	font-weight: 300 
+
+
+
+.about
+	display: inline-block
+	vertical-align: middle
+	color: #FFF
+	text-align: center
+.about__name
+	margin-bottom: 20px
+	+roboto
+	font-size: 60px
+	text-transform: uppercase
+	font-weight: 100  
+.about__profession
+	margin-bottom: 20px
+	text-transform: uppercase
+	font-size: 40px
+	font-weight: 300 
+	line-height: 1.2
+.about__desc
+	position: relative
+	padding: 30px 0
+	margin-bottom: 25px
+	&:before, &:after
+		content: ""
+		position: absolute
+		left: 50px
+		right: 50px
+		height: 2px
+		border: 1px solid #fff
+		border-width: 1px 0
+	&:before
+		top: 0
+	&:after
+		bottom: 0
+	p
+		margin-top: 5px
+		font-weight: 300 
+		&:first-child
+			margin: 0
+
+
+.social
+	font-size: 0
+	text-align: center
+	li
+		display: inline-block
+		margin: 0 10px
+		vertical-align: middle
+	a
+		display: block
+		&:before
+			content: ""
+			display: block
+			opacity: 1 
+		&:hover
+			&:before
+				+tr(all .4s linear)
+				opacity: 0
+				+scale(1.5) 
+.social__fb
+	+s(fb)
+	&:before
+		+s(fb)
+.social__vk
+	+s(vk)
+	&:before
+		+s(vk)
+.social__tw
+	+s(tw)
+	&:before
+		+s(tw)
+
+
+
+
+
+
+.order
+	text-align: center
+	color: #1e1e1e 
+.order__title
+	margin-bottom: 30px
+	font-size: 40px
+	text-transform: uppercase
+	font-weight: 300 
+.order__list
+	min-height: 500px
+	font-size: 0
+.order__item
+	position: relative
+	display: inline-block
+	width: 350px
+	margin-left: -50px
+	padding: 30px
+	background: #FFF 
+	vertical-align: middle
+	border: 1px solid #cfcfcf
+	border-radius: 20px
+	font-size: 13px
+	cursor: pointer
+	+nosel
+	+box
+	+tr(box-shadow .2s linear)
+	z-index: 2 
+	&:first-child
+		margin: 0
+	&:nth-child(2)
+		z-index: 4 
+	&.is-active
+		box-shadow: 0 0 6px rgba(0,0,0,.5)
+		z-index: 6 
+		.order__btn
+			display: block
+.order__type, .order__price
+	font-size: 24px
+	font-weight: 300
+	text-transform: uppercase 
+.order__type
+	margin-bottom: 15px
+.order__content
+	text-align: left
+	line-height: 1.2
+	p, ul, blockquote
+		margin-bottom: 15px
+	li
+		position: relative
+		margin-bottom: 3px
+		padding-left: 20px
+		&:before
+			content: ""
+			position: absolute
+			top: 4px
+			left: 5px
+			width: 7px
+			height: 7px
+			background: #01D1F6
+			border-radius: 50%  
+	blockquote
+		font-style: italic
+		color: #9C9C9C  
+.order__btn
+	display: none
+	padding: 20px
+	margin: 15px -30px -30px
+	border-top: #CFCFCF 1px solid
+	button
+		width: 100%
+		height: 50px
+		background: #01D1F6
+		border-radius: 10px 
+		font-size: 20px
+		text-transform: uppercase
+		color: #fff
+		+tr(background .2s linear) 
+		&:hover
+			background: #05aecc 
+.order__btn-send
+	display: none
+.order__form
+	position: relative
+	display: none
+	margin: 0 -10px
+.order__form-close
+	position: absolute
+	top: -65px
+	right: -7px
+	+s(order-form-close)
+.order__text
+	padding: 0 20px
+	text-align: left
+	color: #9c9c9c 
+	font-style: italic
+	line-height: 1.2
+
+
+
+
+.field
+	margin-bottom: 10px
+	input, textarea
+		width: 100%
+		border-radius: 10px
+		border: 1px solid #cfcfcf 
+		font-size: 17px
+		+box
+	input
+		height: 50px
+		padding: 0 20px
+	textarea
+		height: 100px
+		padding: 10px 20px 
+	span
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 50px
+		padding: 0 20px
+		line-height: 52px
+		font-size: 17px
+		color: #fa0880 
+		text-align: left
+	&.is-error
+		input, textarea
+			+placeholder
+				color: transparent
+
+
+
+
+
+.contacts
+	text-align: center
+.contacts__title
+	margin-bottom: 70px
+	font-size: 40px
+	font-weight: 300
+	text-transform: uppercase
+	color: #FFF  
+.contacts__list
+	margin-bottom: 80px
+	text-align: center
+	>li
+		font-size: 0
+		li
+			display: inline-block
+			width: 400px
+			margin: 0 10px 5px
+			font-size: 20px
+			text-align: left
+			text-transform: uppercase
+			color: #FFF 
+			&:first-child
+				text-align: right
+				color: #01d1f6 
+			a
+				color: #FFF 
+				
+.copyright
+	position: absolute
+	bottom: 15px
+	left: 0
+	right: 0
+	text-align: center
+	a
+		color: #a0a0a0
+		+tr(color .2s linear)
+		&:hover
+			color: #fff 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
