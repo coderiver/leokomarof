@@ -12,6 +12,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.fancybox.pack.js"></script>
 	<script src="js/jquery.fancybox-media.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/cycle.js"></script>
 	<script src="js/jquery.cycle2.carousel.min.js"></script>
 	<script src="js/common.js"></script>
@@ -20,34 +21,36 @@
 <div class="wrapper">
 	<!-- page 1 -->
 	<div class="page">
-		<div class="l-center">
-			<div class="page__in js-page" style="background-image: url(img/leo.png)">
-				<div class="header">
-					<nav class="nav js-nav">
-						<ul>
-							<li><a href="#page-1">Фото</a></li>
-							<li><a href="#page-2">Видео</a></li>
-							<li><a href="#page-3">Био</a></li>
-							<li><a href="#page-4">Услуги и цены</a></li>
-							<li><a href="#page-5">Контакт</a></li>
+		<div class="page__main" style="background-image: url(img/leo.png)">
+			<div class="l-center">
+				<div class="page__in js-page">
+					<div class="header">
+						<nav class="nav js-nav">
+							<ul>
+								<li><a href="#page-1">Фото</a></li>
+								<li><a href="#page-2">Видео</a></li>
+								<li><a href="#page-3">Био</a></li>
+								<li><a href="#page-4">Услуги и цены</a></li>
+								<li><a href="#page-5">Контакт</a></li>
+							</ul>
+						</nav>
+						<ul class="lang">
+							<li class="is-active"><a href="#">Рус</a></li>
+							<li><a href="#">Est</a></li>
+							<li><a href="#">Eng</a></li>
 						</ul>
-					</nav>
-					<ul class="lang">
-						<li class="is-active"><a href="#">Рус</a></li>
-						<li><a href="#">Est</a></li>
-						<li><a href="#">Eng</a></li>
+					</div>
+					<div class="leo">
+						<div class="leo__name">Leo Komarof</div>
+						<div class="leo__profession">Фотограф / видеооператор</div>
+						<div class="leo__description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</div>
+					</div>
+					<ul class="contacts-info">
+						<li>+372 56 94 52 07</li>
+						<li>+380 50 904 85 05</li>
+						<li><a href="mailto:leo@komaroff.eu">leo@komaroff.eu</a></li>
 					</ul>
 				</div>
-				<div class="leo">
-					<div class="leo__name">Leo Komarof</div>
-					<div class="leo__profession">Фотограф / видеооператор</div>
-					<div class="leo__description">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</div>
-				</div>
-				<ul class="contacts-info">
-					<li>+372 56 94 52 07</li>
-					<li>+380 50 904 85 05</li>
-					<li><a href="mailto:leo@komaroff.eu">leo@komaroff.eu</a></li>
-				</ul>
 			</div>
 		</div>
 	</div>
@@ -59,35 +62,35 @@
 				<li><a href="tabs-item-02">Портреты</a></li>
 				<li><a href="tabs-item-03">Семейные фото</a></li>
 			</ul>
-			<div class="tabs__container">
-				<div id="tabs-item-01" class="tabs__item">
-					<div class="slider js-sl">
+			<div class="tabs__container js-sl">
+				<div id="tabs-item-01" class="tabs__item js-sl">
+					<div class="slider js-sl js-sl-on">
 						<div class="l-center">
 							<button class="slider__prev"><i></i></button>
 							<button class="slider__next"><i></i></button>
 							<div class="slider__in">
 								<a href="img/slide1.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
-								<a href="img/slide1.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/about-bg.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
 								<a href="img/slide1.jpg" rel="slider-1" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="tabs-item-02" class="tabs__item">
-					<div class="slider js-sl">
+				<div id="tabs-item-02" class="tabs__item js-sl">
+					<div class="slider js-sl js-sl-on">
 						<div class="l-center">
 							<button class="slider__prev"><i></i></button>
 							<button class="slider__next"><i></i></button>
 							<div class="slider__in">
-								<a href="img/slide1.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
-								<a href="img/slide1.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
-								<a href="img/slide1.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/slide1.jpg)"></a>
+								<a href="img/about-bg.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/about-bg.jpg)"></a>
+								<a href="img/about-bg.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/about-bg.jpg)"></a>
+								<a href="img/about-bg.jpg" rel="slider-2" class="slider__item fancybox-img js-sl" style="background-image: url(img/about-bg.jpg)"></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="tabs-item-03" class="tabs__item">
-					<div class="slider js-sl">
+				<div id="tabs-item-03" class="tabs__item js-sl">
+					<div class="slider js-sl js-sl-on">
 						<div class="l-center">
 							<button class="slider__prev"><i></i></button>
 							<button class="slider__next"><i></i></button>
@@ -110,9 +113,9 @@
 				<li><a href="tabs-item-12">Рекламные ролики</a></li>
 				<li><a href="tabs-item-13">Клипы</a></li>
 			</ul>
-			<div class="tabs__container">
-				<div id="tabs-item-11" class="tabs__item">
-					<div class="slider js-sl">
+			<div class="tabs__container js-sl">
+				<div id="tabs-item-11" class="tabs__item js-sl">
+					<div class="slider js-sl js-sl-on">
 						<div class="l-center">
 							<button class="slider__prev"><i></i></button>
 							<button class="slider__next"><i></i></button>
@@ -199,8 +202,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="tabs-item-12" class="tabs__item">
-					<div class="slider js-sl">
+				<div id="tabs-item-12" class="tabs__item js-sl">
+					<div class="slider js-sl js-sl-on">
 						<div class="l-center">
 							<button class="slider__prev"><i></i></button>
 							<button class="slider__next"><i></i></button>
@@ -287,8 +290,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="tabs-item-13" class="tabs__item">
-					<div class="slider js-sl">
+				<div id="tabs-item-13" class="tabs__item js-sl">
+					<div class="slider js-sl js-sl-on">
 						<div class="l-center">
 							<button class="slider__prev"><i></i></button>
 							<button class="slider__next"><i></i></button>
@@ -379,7 +382,7 @@
 		</div>
 	</div>
 	<!-- page 4 -->
-	<div id="page-3" class="page" style="background-image: url(img/about-bg.jpg)">
+	<div id="page-3" class="page" data-type="background" data-speed="10" style="background-image: url(img/about-bg.jpg)">
 		<div class="l-center l-center_about">
 			<div class="page__in js-page">
 				<div class="about">
@@ -408,101 +411,128 @@
 				<div class="order js-order">
 					<div class="order__title">Услуги фото и видеосъемки</div>
 					<div class="order__list">
+						<!-- 1 -->
 						<div class="order__item">
-							<div class="order__type">Студийная съемка</div>
-							<div class="order__info">
-								<div class="order__content">
-									<ul>
-										<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
-										<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
-										<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
-									</ul>
-									<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
-									<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+							<div class="order__item-in">
+								<div class="order__item-front">
+									<div class="order__type">Студийная съемка</div>
+									<div class="order__info">
+										<div class="order__content">
+											<ul>
+												<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
+											</ul>
+											<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
+											<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+										</div>
+										<div class="order__price">Стоимость: 500€</div>
+									</div>
+									<div class="order__btn">
+										<button class="order__btn-go">Заказать</button>
+									</div>
 								</div>
-								<div class="order__price">Стоимость: 500€</div>
-							</div>
-							<div class="order__form">
-								<button class="order__form-close"></button>
-								<div class="field">
-									<input type="text" placeholder="Ваше имя:">
+								<div class="order__item-back">
+									<div class="order__type">Студийная съемка</div>
+									<div class="order__form">
+										<button class="order__form-close"></button>
+										<div class="field">
+											<input type="text" placeholder="Ваше имя:">
+										</div>
+										<div class="field">
+											<input type="text" placeholder="Номер телефона или e-mail:">
+										</div>
+										<div class="field">
+											<textarea placeholder="Комментарии к заказу..."></textarea>
+										</div>
+										<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
+									</div>
+									<div class="order__btn">
+										<button class="order__btn-send">Отправить </button>
+									</div>
 								</div>
-								<div class="field">
-									<input type="text" placeholder="Номер телефона или e-mail:">
-								</div>
-								<div class="field">
-									<textarea placeholder="Комментарии к заказу..."></textarea>
-								</div>
-								<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
-							</div>
-							<div class="order__btn">
-								<button class="order__btn-go">Заказать</button>
-								<button class="order__btn-send">Отправить </button>
 							</div>
 						</div>
+						<!-- 2 -->
 						<div class="order__item is-active">
-							<div class="order__type">ПОлный свадебный день</div>
-							<div class="order__info">
-								<div class="order__content">
-									<ul>
-										<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
-										<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
-										<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
-									</ul>
-									<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
-									<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+							<div class="order__item-in is-active">
+								<div class="order__item-front">
+									<div class="order__type">Студийная съемка</div>
+									<div class="order__info">
+										<div class="order__content">
+											<ul>
+												<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
+												<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+											</ul>
+											<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
+											<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+										</div>
+										<div class="order__price">Стоимость: 500€</div>
+									</div>
+									<div class="order__btn">
+										<button class="order__btn-go">Заказать</button>
+									</div>
 								</div>
-								<div class="order__price">Стоимость: 500€</div>
-							</div>
-							<div class="order__form">
-								<button class="order__form-close"></button>
-								<div class="field is-error">
-									<input type="text" placeholder="Ваше имя:">
-									<span>Это обязательное поле!</span>
+								<div class="order__item-back">
+									<div class="order__type">Студийная съемка</div>
+									<div class="order__form">
+										<button class="order__form-close"></button>
+										<div class="field is-error">
+											<input type="text" placeholder="Ваше имя:">
+											<span>Это обязательное поле!</span>
+										</div>
+										<div class="field">
+											<input type="text" placeholder="Номер телефона или e-mail:">
+										</div>
+										<div class="field">
+											<textarea placeholder="Комментарии к заказу..."></textarea>
+										</div>
+										<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
+									</div>
+									<div class="order__btn">
+										<button class="order__btn-send">Отправить </button>
+									</div>
 								</div>
-								<div class="field">
-									<input type="text" placeholder="Номер телефона или e-mail:">
-								</div>
-								<div class="field">
-									<textarea placeholder="Комментарии к заказу..."></textarea>
-								</div>
-								<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
-							</div>
-							<div class="order__btn">
-								<button class="order__btn-go">Заказать</button>
-								<button class="order__btn-send">Отправить </button>
 							</div>
 						</div>
+						<!-- 3 -->
 						<div class="order__item">
-							<div class="order__type">Праздничные события</div>
-							<div class="order__info">
-								<div class="order__content">
-									<ul>
-										<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
-										<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
-										<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
-									</ul>
-									<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
-									<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+							<div class="order__item-in">
+								<div class="order__item-front">
+									<div class="order__type">Студийная съемка</div>
+									<div class="order__info">
+										<div class="order__content">
+											<ul>
+												<li>Не менее 500 фотографий с глубокой ретушью для печати</li>
+												<li>Свадебный клип (5 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+												<li>Свадобный фильм (60 минут) <strong>Full HD</strong> / <strong>DVD</strong></li>
+											</ul>
+											<p>Фотограф проведет с молодоженами целый день, снимет все важные моменты свадьбы: боры жениха, сборы невесты, выкуп, регистрация в ЗАГСе (или выездная церемония), венчание, прогулка, свадебный банкет.</p>
+											<blockquote>Если вы не хотите пользоваться услугами фотографа весь свадебный день, возможно заказать съемку отдельных моментов. В этом случае цена будет договорная.</blockquote>
+										</div>
+										<div class="order__price">Стоимость: 500€</div>
+									</div>
+									<div class="order__btn">
+										<button class="order__btn-go">Заказать</button>
+									</div>
 								</div>
-								<div class="order__price">Стоимость: 500€</div>
-							</div>
-							<div class="order__form">
-								<button class="order__form-close"></button>
-								<div class="field">
-									<input type="text" placeholder="Ваше имя:">
+								<div class="order__item-back">
+									<div class="order__type">Студийная съемка</div>
+									<div class="order__form">
+										<button class="order__form-close"></button>
+										<div class="field">
+											<input type="text" placeholder="Ваше имя:">
+										</div>
+										<div class="field">
+											<input type="text" placeholder="Номер телефона или e-mail:">
+										</div>
+										<div class="field">
+											<textarea placeholder="Комментарии к заказу..."></textarea>
+										</div>
+										<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
+									</div>
+									<div class="order__btn">
+										<button class="order__btn-send">Отправить </button>
+									</div>
 								</div>
-								<div class="field">
-									<input type="text" placeholder="Номер телефона или e-mail:">
-								</div>
-								<div class="field">
-									<textarea placeholder="Комментарии к заказу..."></textarea>
-								</div>
-								<div class="order__text">Я обязательно свяжусь с вами заранее, чтобы уточнить все детали вашего заказа...</div>
-							</div>
-							<div class="order__btn">
-								<button class="order__btn-go">Заказать</button>
-								<button class="order__btn-send">Отправить </button>
 							</div>
 						</div>
 					</div>

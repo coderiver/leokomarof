@@ -36,17 +36,49 @@
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
++font(MyriadProLightSemiCn, MyriadPro-LightSemiCn)  
+=fl
+	font-family: "MyriadProLightSemiCn",arial,sans-serif 
 =roboto	
 	font-family: 'Roboto', Arial, sans-serif 
 	font-weight: 100 
+	
+
+
+// @font-face
+// 	font-family: 'myriad_prolight'
+// 	src: url('fonts/myriadprol-webfont.eot')
+// 	src: url('fonts/myriadprol-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/myriadprol-webfont.woff') format('woff'), url('fonts/myriadprol-webfont.ttf') format('truetype'), url('fonts/myriadprol-webfont.svg#myriad_prolight') format('svg')
+// 	font-weight: normal
+// 	font-style: normal
+// =fml
+// 	font-family: "myriad_prolight",arial,sans-serif 
+
+// @font-face
+// 	font-family: 'myriad_probold'
+// 	src: url('myriadprob-webfont.eot')
+// 	src: url('myriadprob-webfont.eot?#iefix') format('embedded-opentype'), url('myriadprob-webfont.woff') format('woff'), url('myriadprob-webfont.ttf') format('truetype'), url('myriadprob-webfont.svg#myriad_probold') format('svg')
+// 	font-weight: normal
+// 	font-style: normal
+// =fmb
+// 	font-family: "myriad_probold",arial,sans-serif 	
+
+@font-face
+	font-family: 'myriad_proregular'
+	src: url('myriadpror-webfont.eot')
+	src: url('myriadpror-webfont.eot?#iefix') format('embedded-opentype'), url('myriadpror-webfont.woff') format('woff'), url('myriadpror-webfont.ttf') format('truetype'), url('myriadpror-webfont.svg#myriad_proregular') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+=flr
+	font-family: "myriad_proregular",arial,sans-serif 
+
 
 body
+	min-width: 1000px
 	background: url(../img/bg.png) 
+	font-family: 'Myriad Pro', 'myriad_proregular', Arial, sans-serif 
 	font-size: 13px 
-	font-family: 'Roboto Condensed', Arial, sans-serif 
 	line-height: 1.4
 	color: #767676 
 a
@@ -65,16 +97,18 @@ button, input, textarea
 .page
 	position: relative
 	+cover
+	background-attachment: fixed 
 .page_order
 	background: #FFF 
+.page__main
+	background-size: auto 100%
+	background-repeat: no-repeat 
+	background-position: 90% 0 
 .page__in
 	position: relative
 	display: table-cell
 	width: 1000px	
 	vertical-align: middle
-	background-size: auto 100%
-	background-repeat: no-repeat 
-	background-position: 100% 0  
 
 
 .header
@@ -94,6 +128,7 @@ button, input, textarea
 	a
 		text-transform: uppercase
 		color: #767676 
+		+fl
 		font-size: 22px 
 		font-weight: 300 
 		+tr(color .2s linear)
@@ -143,6 +178,7 @@ button, input, textarea
 .leo__profession
 	margin-bottom: 30px
 	text-transform: uppercase
+	+fl
 	font-size: 20px
 	font-weight: 300  
 .leo__description
@@ -157,6 +193,7 @@ button, input, textarea
 	left: 0
 	text-align: center
 	font-size: 0
+	z-index: 20 
 	li
 		display: inline-block
 		margin: 0 2px
@@ -171,7 +208,8 @@ button, input, textarea
 		display: block
 		height: 55px
 		padding: 0 13px
-		line-height: 50px
+		line-height: 55px
+		+fl
 		font-size: 22px 
 		color: #B3B3B3
 		+tr(all .2s linear)
@@ -189,8 +227,23 @@ button, input, textarea
 		&:hover
 			color: #fff 
 .tabs__container
-	padding-top: 55px
-
+	position: absolute
+	top: 55px
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+.tabs__item
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	opacity: 0 
+	+tr(all .3s linear)
+	z-index: 2
+	&.is-active
+		opacity: 1
+		z-index: 4 
 
 
 .slider
@@ -295,7 +348,7 @@ button, input, textarea
 .slider__title
 	font-size: 20px
 	text-transform: uppercase
-	font-weight: 300 
+
 
 
 
@@ -313,8 +366,8 @@ button, input, textarea
 .about__profession
 	margin-bottom: 20px
 	text-transform: uppercase
+	+fl
 	font-size: 40px
-	font-weight: 300 
 	line-height: 1.2
 .about__desc
 	position: relative
@@ -380,40 +433,71 @@ button, input, textarea
 	color: #1e1e1e 
 .order__title
 	margin-bottom: 30px
+	+fl
 	font-size: 40px
 	text-transform: uppercase
-	font-weight: 300 
 .order__list
-	min-height: 500px
+	padding-top: 30px
 	font-size: 0
 .order__item
 	position: relative
+	top: 0
 	display: inline-block
-	width: 350px
-	margin-left: -50px
-	padding: 30px
-	background: #FFF 
-	vertical-align: middle
-	border: 1px solid #cfcfcf
-	border-radius: 20px
+	width: 290px
+	margin-left: -20px
+	vertical-align: top
+	+perspective(1000px)
+	+tr(top .2s linear)
+	&.is-active
+		top: -30px
+		z-index: 6 
+		.order__item-back, .order__item-front
+			box-shadow: 0 0 6px rgba(0,0,0,.25)
+		.order__item-front
+			.order__btn
+				height: auto
+				+tr(opacity .5s linear)
+				opacity: 1
+.order__item-in
 	font-size: 13px
 	cursor: pointer
-	+nosel
-	+box
-	+tr(box-shadow .2s linear)
+	+transform-style(preserve-3d)
+	+tr(all .3s ease-out)
 	z-index: 2 
 	&:first-child
 		margin: 0
 	&:nth-child(2)
 		z-index: 4 
-	&.is-active
-		box-shadow: 0 0 6px rgba(0,0,0,.5)
-		z-index: 6 
-		.order__btn
-			display: block
+	&.is-flipped
+		+transform(rotateY(180deg))
+		.order__item-back
+			+transform(rotateY(180deg))
+.order__item-back, .order__item-front
+	padding: 30px
+	background: #FFF 
+	border-radius: 20px
+	border: 1px solid #cfcfcf
+	+backface-visibility(hidden)
+	+gpu
+	+box
+.order__item-back
+	position: absolute
+	top: 0
+	left: 0
+	right: 0 
+	bottom: 0
+	+transform(rotateY(180deg))
+.order__item-front
+	.order__btn
+		height: 0
+		+box
+		opacity: 0 
+		overflow: hidden
+.order__info
+	min-height: 320px
 .order__type, .order__price
+	+fl	
 	font-size: 24px
-	font-weight: 300
 	text-transform: uppercase 
 .order__type
 	margin-bottom: 15px
@@ -439,7 +523,6 @@ button, input, textarea
 		font-style: italic
 		color: #9C9C9C  
 .order__btn
-	display: none
 	padding: 20px
 	margin: 15px -30px -30px
 	border-top: #CFCFCF 1px solid
@@ -454,11 +537,9 @@ button, input, textarea
 		+tr(background .2s linear) 
 		&:hover
 			background: #05aecc 
-.order__btn-send
-	display: none
 .order__form
-	position: relative
-	display: none
+	position: relative 
+	min-height: 320px
 	margin: 0 -10px
 .order__form-close
 	position: absolute
@@ -476,6 +557,7 @@ button, input, textarea
 
 
 .field
+	position: relative
 	margin-bottom: 10px
 	input, textarea
 		width: 100%

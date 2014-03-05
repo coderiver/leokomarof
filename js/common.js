@@ -8,16 +8,15 @@ if (fbox.length) {
 	fbox.fancybox({
 		openEffect  : 'elastic',
 		closeEffect : 'elastic',
+		prevEffect: 'fade',
+		nextEffect: 'fade',
 		padding: 0,
+		maxWidth: 1000,
 		helpers : {
 			media : {}
 		}
 	});
 };
-
-
-
-
 
 //tabs
 function tabs() {
@@ -25,15 +24,15 @@ function tabs() {
     var tabs_btn = $(this).find('.tabs__nav a');
     var tabs_container = $(this).find('.tabs__container');
     var tabs_item = $(this).find('.tabs__item');
-    tabs_item.hide();
-    tabs_item.first().show();
+    tabs_item.removeClass('is-active');
+    tabs_item.first().addClass('is-active');
     tabs_btn.on('click', function() {
 	    if (!$(this).parent('li').hasClass('is-active')) {
 	    	var id = $(this).attr('href');
 		    tabs_btn.parent('li').removeClass("is-active");
 		    $(this).parent('li').addClass("is-active");
-		    tabs_item.slideUp();
-		    $('#'+id).slideDown();
+		    tabs_item.removeClass('is-active');
+		    $('#'+id).addClass('is-active');
 	    };
 	    return false;
     });
@@ -43,7 +42,7 @@ tabs();
 
 //sliders
 function sl () {
-	var el = $('.js-sl');
+	var el = $('.js-sl-on');
 	if (el.length > 0) {
 		el.each(function(){
 			el_next = $(this).find('.slider__next');
@@ -79,7 +78,7 @@ function nav() {
 	btn.on('click', function(){
 		var attr = $(this).attr('href');
 		var top = $(attr).offset().top;
-		$('body').animate({scrollTop: top}, 500);			
+		$('body').animate({scrollTop: top}, 1000, 'easeInOutQuint');			
 		return false;
 	});	
 }
@@ -89,27 +88,47 @@ nav();
 function order () {
 	var el = $('.js-order');
 	var item = el.find('.order__item');
+	var info = el.find('.order__info');
+	var form = el.find('.order__form');
 	var go = el.find('.order__btn-go');
 	var send = el.find('.order__btn-send');
 	var close = el.find('.order__form-close');
 	item.hover(function(){
 		item.removeClass('is-active');
 		$(this).addClass('is-active');
-	}, function(){});
+	}, function(){
+		$(this).find('.order__item-in').removeClass('is-flipped');
+	});
 	go.on('click', function(){
-		$(this).parents('.order__item').find('.order__info').slideUp();
-		$(this).parents('.order__item').find('.order__form').slideDown();
-		$(this).parents('.order__item').find('.order__btn-go').hide();
-		$(this).parents('.order__item').find('.order__btn-send').show();
+		$(this).parents('.order__item-in').addClass('is-flipped');
 	});
 	close.on('click', function(){
-		$(this).parents('.order__item').find('.order__info').slideDown();
-		$(this).parents('.order__item').find('.order__form').slideUp();
-		$(this).parents('.order__item').find('.order__btn-go').show();
-		$(this).parents('.order__item').find('.order__btn-send').hide();
+		$(this).parents('.order__item-in').removeClass('is-flipped');
 	});
+	var max = -1;
+	var min = 320;
+	info.each(function(){
+		var h = $(this).height(); 
+		max = h > max ? h : max;
+	})
+	if (max > min) {
+		info.height(max);
+		form.height(max);
+	};
 }
 order();
+
+//paralax
+$('div[data-type="background"]').each(function(){
+  var $bgobj = $(this); // создаем объект
+  $(window).scroll(function() {
+    var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
+    // Присваиваем значение background-position
+    var coords = 'center '+ yPos + 'px';
+    // Создаем эффект Parallax Scrolling
+    $bgobj.css({ backgroundPosition: coords });
+  });
+});
 
 wnd.resize(function(){
 	sizer();
