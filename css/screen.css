@@ -21,9 +21,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: MyriadProLightSemiCn; src: url("fonts/MyriadPro-LightSemiCn.eot"); src: url("fonts/MyriadPro-LightSemiCn.eot?#iefix") format("embedded-opentype"), url("fonts/MyriadPro-LightSemiCn.woff") format("woff"), url("fonts/MyriadPro-LightSemiCn.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-@font-face { font-family: "myriad_proregular"; src: url("myriadpror-webfont.eot"); src: url("myriadpror-webfont.eot?#iefix") format("embedded-opentype"), url("myriadpror-webfont.woff") format("woff"), url("myriadpror-webfont.ttf") format("truetype"), url("myriadpror-webfont.svg#myriad_proregular") format("svg"); font-weight: normal; font-style: normal; }
-
-body { min-width: 1000px; background: url(../img/bg.png); font-family: "Myriad Pro", "myriad_proregular", Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #767676; }
+body { min-width: 1000px; background: url(../img/bg.png); -webkit-font-smoothing: antialiased; font-family: "Myriad Pro", "Open Sans", Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #767676; }
 
 a { text-decoration: none; color: #767676; }
 
@@ -47,7 +45,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 .nav ul, .nav li { float: left; }
 .nav li { margin-left: 30px; }
 .nav li:first-child { margin: 0; }
-.nav a { text-transform: uppercase; color: #767676; font-family: "MyriadProLightSemiCn", arial, sans-serif; font-size: 22px; font-weight: 300; -webkit-transition: color 0.2s linear; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; transition: color 0.2s linear; }
+.nav a { text-transform: uppercase; color: #767676; font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 22px; font-weight: 300; -webkit-transition: color 0.2s linear; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; transition: color 0.2s linear; }
 .nav a:hover { color: white; }
 
 .lang { float: right; margin-top: 22px; }
@@ -67,7 +65,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .leo__name { margin-bottom: 10px; font-family: "Roboto", Arial, sans-serif; font-weight: 100; text-transform: uppercase; color: white; font-size: 72px; line-height: 1; }
 
-.leo__profession { margin-bottom: 30px; text-transform: uppercase; font-family: "MyriadProLightSemiCn", arial, sans-serif; font-size: 20px; font-weight: 300; }
+.leo__profession { margin-bottom: 30px; text-transform: uppercase; font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 20px; font-weight: 300; }
 
 .leo__description { max-width: 380px; }
 
@@ -75,7 +73,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 .tabs__nav li { display: inline-block; margin: 0 2px; }
 .tabs__nav li.is-active a { color: white; cursor: default; }
 .tabs__nav li.is-active a:after { background: #01d1f6; }
-.tabs__nav a { position: relative; display: block; height: 55px; padding: 0 13px; line-height: 55px; font-family: "MyriadProLightSemiCn", arial, sans-serif; font-size: 22px; color: #b3b3b3; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; text-transform: uppercase; font-weight: 300; }
+.tabs__nav a { position: relative; display: block; height: 55px; padding: 0 13px; line-height: 55px; font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 22px; color: #b3b3b3; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; text-transform: uppercase; font-weight: 300; }
 .tabs__nav a:after { content: ""; position: absolute; bottom: 12px; left: 0; right: 0; height: 2px; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; background: transparent; }
 .tabs__nav a:hover { color: white; }
 
@@ -125,7 +123,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .about__name { margin-bottom: 20px; font-family: "Roboto", Arial, sans-serif; font-weight: 100; font-size: 60px; text-transform: uppercase; font-weight: 100; }
 
-.about__profession { margin-bottom: 20px; text-transform: uppercase; font-family: "MyriadProLightSemiCn", arial, sans-serif; font-size: 40px; line-height: 1.2; }
+.about__profession { margin-bottom: 20px; text-transform: uppercase; font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 40px; line-height: 1.2; }
 
 .about__desc { position: relative; padding: 30px 0; margin-bottom: 25px; }
 .about__desc:before, .about__desc:after { content: ""; position: absolute; left: 50px; right: 50px; height: 2px; border: 1px solid white; border-width: 1px 0; }
@@ -151,7 +149,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .order { text-align: center; color: #1e1e1e; }
 
-.order__title { margin-bottom: 30px; font-family: "MyriadProLightSemiCn", arial, sans-serif; font-size: 40px; text-transform: uppercase; }
+.order__title { margin-bottom: 30px; font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 40px; text-transform: uppercase; }
 
 .order__list { padding-top: 30px; font-size: 0; }
 
@@ -174,7 +172,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .order__info { min-height: 270px; }
 
-.order__type, .order__price { font-family: "MyriadProLightSemiCn", arial, sans-serif; font-size: 24px; text-transform: uppercase; }
+.order__type, .order__price { font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 24px; text-transform: uppercase; }
 
 .order__type { margin-bottom: 15px; }
 
@@ -207,7 +205,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .contacts { text-align: center; }
 
-.contacts__title { margin-bottom: 70px; font-size: 40px; font-weight: 300; text-transform: uppercase; color: white; }
+.contacts__title { margin-bottom: 70px; font-family: "MyriadProLightSemiCn", "Open Sans", Arial, sans-serif; font-weight: 300; font-size: 40px; text-transform: uppercase; color: white; }
 
 .contacts__list { margin-bottom: 80px; text-align: center; }
 .contacts__list > li { font-size: 0; }

@@ -38,7 +38,8 @@
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
 +font(MyriadProLightSemiCn, MyriadPro-LightSemiCn)  
 =fl
-	font-family: "MyriadProLightSemiCn",arial,sans-serif 
+	font-family: 'MyriadProLightSemiCn', 'Open Sans', Arial, sans-serif 
+	font-weight: 300 
 =roboto	
 	font-family: 'Roboto', Arial, sans-serif 
 	font-weight: 100 
@@ -63,21 +64,22 @@
 // =fmb
 // 	font-family: "myriad_probold",arial,sans-serif 	
 
-@font-face
-	font-family: 'myriad_proregular'
-	src: url('myriadpror-webfont.eot')
-	src: url('myriadpror-webfont.eot?#iefix') format('embedded-opentype'), url('myriadpror-webfont.woff') format('woff'), url('myriadpror-webfont.ttf') format('truetype'), url('myriadpror-webfont.svg#myriad_proregular') format('svg')
-	font-weight: normal
-	font-style: normal
+// @font-face
+// 	font-family: 'myriad_proregular'
+// 	src: url('myriadpror-webfont.eot')
+// 	src: url('myriadpror-webfont.eot?#iefix') format('embedded-opentype'), url('myriadpror-webfont.woff') format('woff'), url('myriadpror-webfont.ttf') format('truetype'), url('myriadpror-webfont.svg#myriad_proregular') format('svg')
+// 	font-weight: normal
+// 	font-style: normal
 	
-=flr
-	font-family: "myriad_proregular",arial,sans-serif 
+// =flr
+// 	font-family: "myriad_proregular",arial,sans-serif 
 
 
 body
 	min-width: 1000px
 	background: url(../img/bg.png) 
-	font-family: 'Myriad Pro', 'myriad_proregular', Arial, sans-serif 
+	-webkit-font-smoothing: antialiased
+	font-family: 'Myriad Pro', 'Open Sans', Arial, sans-serif 
 	font-size: 13px 
 	line-height: 1.4
 	color: #767676 
@@ -593,8 +595,8 @@ button, input, textarea
 	text-align: center
 .contacts__title
 	margin-bottom: 70px
+	+fl
 	font-size: 40px
-	font-weight: 300
 	text-transform: uppercase
 	color: #FFF  
 .contacts__list

@@ -2,6 +2,23 @@ $(document).ready(function() {
 
 wnd = $(window);
 
+//scroll
+var body = $('body');
+var wrap = $('.wrapper');
+
+wrap.bind('mousewheel', function(event, delta) {
+	if (body.hasClass('is-running')) {
+		//alert('i am running dont talk to me');
+	}
+	else{
+		//alert('go!');
+		body.addClass('is-running');
+  	if (delta < 0) {
+
+  	}
+  }
+});
+
 //fancybox
 var fbox = $('.fancybox-media, .fancybox-img');
 if (fbox.length) {
@@ -78,7 +95,7 @@ function nav() {
 	btn.on('click', function(){
 		var attr = $(this).attr('href');
 		var top = $(attr).offset().top;
-		$('body').animate({scrollTop: top}, 1000, 'easeInOutQuint');			
+		$('html, body').animate({scrollTop: top}, 1000, 'easeInOutQuint');			
 		return false;
 	});	
 }
