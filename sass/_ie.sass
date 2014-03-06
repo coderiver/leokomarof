@@ -1,0 +1,31 @@
+//ie8
+.ie8
+	.order__item-back
+		display: none
+	.order__item-in
+		&.is-flipped
+			.order__item-back
+				display: block
+				z-index: 2 
+	.order__item-front
+		.order__btn
+			display: none
+	.order__item
+		&.is-active
+			.order__item-front
+				.order__btn
+					display: block
+	.field
+		input
+			line-height: 50px
+	.slider__prev, .slider__next
+		+opacity(.5)
+	.tabs__nav
+		li
+			&.is-active
+				a
+					height: 53px
+					border-bottom: 2px solid #01D1F6  
+		a
+			&:after
+				display: none

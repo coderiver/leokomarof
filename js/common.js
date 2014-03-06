@@ -2,21 +2,41 @@ $(document).ready(function() {
 
 wnd = $(window);
 
-//scroll
 var body = $('body');
 var wrap = $('.wrapper');
-
+//scroll
 wrap.bind('mousewheel', function(event, delta) {
+	var el = $('.js-scroll-nav');
+	var act = el.find('li.is-current');
 	if (body.hasClass('is-running')) {
 		//alert('i am running dont talk to me');
 	}
 	else{
 		//alert('go!');
-		body.addClass('is-running');
   	if (delta < 0) {
-
+  		if (act.next().length>0) {
+  			body.addClass('is-running');
+  			act.removeClass('is-current').next().addClass('is-current');
+  			var attr = act.next().attr('data-page');
+  			var top = $('#'+attr).offset().top;
+  			$('html, body').animate({scrollTop: top}, 1000, 'easeInOutQuint', function(){
+  				body.removeClass('is-running');
+  			});		
+  		};
+  	}
+  	else {
+  		if (act.prev().length>0) {
+  			body.addClass('is-running');
+  			act.removeClass('is-current').prev().addClass('is-current');
+  			var attr = act.prev().attr('data-page');
+  			var top = $('#'+attr).offset().top;
+  			$('html, body').animate({scrollTop: top}, 1000, 'easeInOutQuint', function(){
+  				body.removeClass('is-running');
+  			});		
+  		};
   	}
   }
+  return false;
 });
 
 //fancybox

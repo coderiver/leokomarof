@@ -1,5 +1,5 @@
 <!doctype html>
-<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if IE 8]><html class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 <body>
 <div class="wrapper">
 	<!-- page 1 -->
-	<div class="page js-scroll">
+	<div id="page-0" class="page">
 		<div class="page__main" style="background-image: url(img/leo.png)">
 			<div class="l-center">
 				<div class="page__in js-page">
@@ -56,7 +56,7 @@
 		</div>
 	</div>
 	<!-- page 2 -->
-	<div id="page-1" class="page js-page js-scroll">
+	<div id="page-1" class="page js-page">
 		<div class="tabs js-tabs">
 			<ul class="tabs__nav">
 				<li class="is-active"><a href="tabs-item-01">Свадьбы</a></li>
@@ -107,7 +107,7 @@
 		</div>
 	</div>
 	<!-- page 3 -->
-	<div id="page-2" class="page js-page js-scroll">
+	<div id="page-2" class="page js-page">
 		<div class="tabs js-tabs">
 			<ul class="tabs__nav">
 				<li class="is-active"><a href="tabs-item-11">Свадьбы</a></li>
@@ -383,7 +383,7 @@
 		</div>
 	</div>
 	<!-- page 4 -->
-	<div id="page-3" class="page js-scroll" data-type="background" data-speed="0" style="background-image: url(img/about-bg.jpg)">
+	<div id="page-3" class="page" data-type="background" data-speed="0" style="background-image: url(img/about-bg.jpg)">
 		<div class="l-center l-center_about">
 			<div class="page__in js-page">
 				<div class="about">
@@ -406,7 +406,7 @@
 		</div>
 	</div>
 	<!-- page 5 -->
-	<div id="page-4" class="page page_order js-scroll">
+	<div id="page-4" class="page page_order">
 		<div class="l-center">
 			<div class="page__in js-page">
 				<div class="order js-order">
@@ -542,7 +542,7 @@
 		</div>
 	</div>
 	<!-- page 6 -->
-	<div id="page-5" class="page js-scroll">
+	<div id="page-5" class="page">
 		<div class="l-center">
 			<div class="page__in js-page">
 				<div class="contacts">
@@ -577,9 +577,14 @@
 			</div>
 		</div>
 	</div>
-	<nav class="scroll-nav">
-		<div class="scroll-nav__item" data-item=""></div>
-	</nav>
+	<ul class="js-scroll-nav" hidden>
+		<li class="is-current" data-page="page-0"></li>
+		<li data-page="page-1"></li>
+		<li data-page="page-2"></li>
+		<li data-page="page-3"></li>
+		<li data-page="page-4"></li>
+		<li data-page="page-5"></li>
+	</ul>
 </div>
 </body>
 </html>

@@ -89,7 +89,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .slider__item { position: relative !important; width: 1000px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
-.slider__prev, .slider__next { position: absolute; top: 0; bottom: 0; width: 1000px; background: rgba(0, 0, 0, 0.5); z-index: 200; }
+.slider__prev, .slider__next { position: absolute; top: 0; bottom: 0; width: 1000px; background: black; background: rgba(0, 0, 0, 0.5); overflow: visible; z-index: 200; }
 .slider__prev i, .slider__next i { position: absolute; top: 50%; margin-top: -48px; opacity: 0.3; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .slider__prev:hover i, .slider__next:hover i { opacity: 1; }
 
@@ -265,7 +265,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .fancybox-tmp { position: absolute; top: -99999px; left: -99999px; visibility: hidden; max-width: 99999px; max-height: 99999px; overflow: visible !important; }
 
-.fancybox-overlay { position: absolute; top: 0; left: 0; overflow: hidden; display: none; z-index: 8010; background: rgba(0, 0, 0, 0.8); }
+.fancybox-overlay { position: absolute; top: 0; left: 0; overflow: hidden; display: none; z-index: 8010; background: black; background: rgba(0, 0, 0, 0.8); }
 
 .fancybox-overlay-fixed { position: fixed; bottom: 0; right: 0; }
 
@@ -283,6 +283,15 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 .fancybox-title-inside-wrap { padding-top: 10px; }
 
 .fancybox-title-over-wrap { position: absolute; bottom: 0; left: 0; color: white; padding: 10px; background: black; background: rgba(0, 0, 0, 0.8); }
+
+.ie8 .order__item-back { display: none; }
+.ie8 .order__item-in.is-flipped .order__item-back { display: block; z-index: 2; }
+.ie8 .order__item-front .order__btn { display: none; }
+.ie8 .order__item.is-active .order__item-front .order__btn { display: block; }
+.ie8 .field input { line-height: 50px; }
+.ie8 .slider__prev, .ie8 .slider__next { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; }
+.ie8 .tabs__nav li.is-active a { height: 53px; border-bottom: 2px solid #01d1f6; }
+.ie8 .tabs__nav a:after { display: none; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
