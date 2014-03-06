@@ -21,7 +21,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 @font-face { font-family: MyriadProLightSemiCn; src: url("fonts/MyriadPro-LightSemiCn.eot"); src: url("fonts/MyriadPro-LightSemiCn.eot?#iefix") format("embedded-opentype"), url("fonts/MyriadPro-LightSemiCn.woff") format("woff"), url("fonts/MyriadPro-LightSemiCn.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-body { min-width: 1000px; background: url(../img/bg.png); -webkit-font-smoothing: antialiased; font-family: "Myriad Pro", "Open Sans", Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #767676; }
+body { min-width: 1000px; background: url(../img/bg.png); font-family: "Myriad Pro", "Open Sans", Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #767676; }
 
 a { text-decoration: none; color: #767676; }
 
@@ -34,6 +34,8 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 .page { position: relative; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-attachment: fixed; }
 
 .page_order { background: white; }
+
+.page_about { -webkit-background-size: auto; -o-background-size: auto; background-size: auto; background-position: 50% 0; }
 
 .page__main { background-size: auto 100%; background-repeat: no-repeat; background-position: 90% 0; }
 
