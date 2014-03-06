@@ -113,7 +113,18 @@ function nav() {
 	var el = $('.js-nav');
 	btn = el.find('a');
 	btn.on('click', function(){
+		var nav = $('.js-scroll-nav');
 		var attr = $(this).attr('href');
+		var nav_item = nav.find('li');
+		nav_item.each(function(){
+			var nav_attr = $(this).attr('data-page');
+			nav_attr = '#' + nav_attr; 
+			console.log(attr+'_'+nav_attr);
+			if (attr == nav_attr) {
+				nav_item.removeClass('is-current');
+				$(this).addClass('is-current');
+			};
+		});
 		var top = $(attr).offset().top;
 		$('html, body').animate({scrollTop: top}, 1000, 'easeInOutQuint');			
 		return false;
