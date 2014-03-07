@@ -79,15 +79,22 @@ tabs();
 
 //sliders
 function sl () {
-	var el = $('.js-sl-on');
+	var el = $('.js-sl');
 	if (el.length > 0) {
 		el.each(function(){
 			el_next = $(this).find('.slider__next');
 			el_prev = $(this).find('.slider__prev');
 			el_item = $(this).find('.slider__item');
 			el_in = $(this).find('.slider__in');
+			if (navigator.userAgent.indexOf('iPad') == -1){
+				el_anim = 'carousel';
+				$('body').addClass('no-ipad');
+			}
+			else{
+				el_anim = 'fade';
+			};
 			el_in.cycle({
-				fx: 'carousel',
+				fx: el_anim,
 			  timeout: 0,
 			  prev: el_prev,
 			  next: el_next,
@@ -100,11 +107,14 @@ sl();
 
 //sizer
 function sizer () {
-	var sizer = $('.js-page');
-	var slide = $('.js-sl');
-	wnd_height = wnd.height();
-	sizer.height(wnd_height);
-	slide.height(wnd_height - 55);
+	if (navigator.userAgent.indexOf('iPad') == -1){
+		var sizer = $('.js-page');
+		var slide = $('.js-sl-height');
+		wnd_height = wnd.height();
+		sizer.height(wnd_height);
+		sl_height = wnd_height - 55;
+		slide.height(sl_height);
+	}
 }
 sizer();
 
@@ -166,12 +176,10 @@ order();
 
 //paralax
 $('div[data-type="background"]').each(function(){
-  var $bgobj = $(this); // создаем объект
+  var $bgobj = $(this);
   $(window).scroll(function() {
     var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
-    // Присваиваем значение background-position
     var coords = 'center '+ yPos + 'px';
-    // Создаем эффект Parallax Scrolling
     $bgobj.css({ backgroundPosition: coords });
   });
 });
