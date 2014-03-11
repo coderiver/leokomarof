@@ -88,6 +88,13 @@ body
 			position: relative !important
 		.slider__in
 			overflow: visible !important
+		.page
+			background-attachment: fixed
+		.page_about
+			-webkit-background-size: auto
+			-o-background-size: auto
+			background-size: auto
+			background-position: 50% 0 
 a
 	text-decoration: none
 	color: #767676
@@ -104,15 +111,9 @@ button, input, textarea
 .page
 	position: relative
 	height: 768px
-	+cover
-	background-attachment: fixed 
+	+cover 
 .page_order
-	background: #FFF 
-.page_about
-	-webkit-background-size: auto
-	-o-background-size: auto
-	background-size: auto
-	background-position: 50% 0 
+	background: #FFF
 .page__main
 	background-size: auto 100%
 	background-repeat: no-repeat 
@@ -309,7 +310,6 @@ button, input, textarea
 	+cover
 	cursor: pointer
 	overflow: hidden
-	+gpu
 	&:before, &:after
 		content: ""
 		position: absolute

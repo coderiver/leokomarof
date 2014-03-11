@@ -24,6 +24,8 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 body { min-width: 1000px; background: url(../img/bg.png); font-family: "Myriad Pro", "Open Sans", Arial, sans-serif; font-size: 13px; line-height: 1.4; color: #767676; }
 body.no-ios .slider__item { position: relative !important; }
 body.no-ios .slider__in { overflow: visible !important; }
+body.no-ios .page { background-attachment: fixed; }
+body.no-ios .page_about { -webkit-background-size: auto; -o-background-size: auto; background-size: auto; background-position: 50% 0; }
 
 a { text-decoration: none; color: #767676; }
 
@@ -33,11 +35,9 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .l-center_about { width: 400px; }
 
-.page { position: relative; height: 768px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; background-attachment: fixed; }
+.page { position: relative; height: 768px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .page_order { background: white; }
-
-.page_about { -webkit-background-size: auto; -o-background-size: auto; background-size: auto; background-position: 50% 0; }
 
 .page__main { background-size: auto 100%; background-repeat: no-repeat; background-position: 90% 0; }
 
@@ -102,7 +102,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 .slider__next { right: -1000px; }
 .slider__next i { left: 30px; background: url('../img/icons-sf91d667518.png') 0 -364px no-repeat; width: 48px; height: 95px; }
 
-.slider__block { position: absolute; width: 50%; height: 50%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; cursor: pointer; overflow: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.slider__block { position: absolute; width: 50%; height: 50%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; cursor: pointer; overflow: hidden; }
 .slider__block:before, .slider__block:after { content: ""; position: absolute; opacity: 0; }
 .slider__block:before { top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.5); -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; transition: opacity 0.2s linear; z-index: 2; }
 .slider__block:after { top: 50%; left: 50%; margin: -55px 0 0 -30px; -webkit-transform: scale(1.5, 1.5); -moz-transform: scale(1.5, 1.5); -ms-transform: scale(1.5, 1.5); -o-transform: scale(1.5, 1.5); transform: scale(1.5, 1.5); -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; background: url('../img/icons-sf91d667518.png') 0 -152px no-repeat; width: 59px; height: 52px; z-index: 6; }
