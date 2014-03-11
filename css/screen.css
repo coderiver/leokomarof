@@ -37,7 +37,7 @@ button, input, textarea { font-family: "Roboto Condensed", Arial, sans-serif; }
 
 .page_order { background: white; }
 
-.page_about { -webkit-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; background-position: 50% 0; }
+.page_about { -webkit-background-size: auto; -o-background-size: auto; background-size: auto; background-position: 50% 0; }
 
 .page__main { background-size: auto 100%; background-repeat: no-repeat; background-position: 90% 0; }
 
