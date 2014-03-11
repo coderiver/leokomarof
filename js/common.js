@@ -86,9 +86,9 @@ function sl () {
 			el_prev = $(this).find('.slider__prev');
 			el_item = $(this).find('.slider__item');
 			el_in = $(this).find('.slider__in');
-			if (navigator.userAgent.indexOf('iPad') == -1){
+			if (navigator.userAgent.indexOf('iPad') == -1 || navigator.userAgent.indexOf('iPod') == -1 || navigator.userAgent.indexOf('iPhone') == -1){
 				el_anim = 'carousel';
-				$('body').addClass('no-ipad');
+				$('body').addClass('no-ios');
 			}
 			else{
 				el_anim = 'fade';
@@ -175,14 +175,16 @@ function order () {
 order();
 
 //paralax
-$('div[data-type="background"]').each(function(){
-  var $bgobj = $(this);
-  $(window).scroll(function() {
-    var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
-    var coords = 'center '+ yPos + 'px';
-    $bgobj.css({ backgroundPosition: coords });
-  });
-});
+if (navigator.userAgent.indexOf('iPad') == -1 || navigator.userAgent.indexOf('iPod') == -1 || navigator.userAgent.indexOf('iPhone') == -1){
+	$('div[data-type="background"]').each(function(){
+	  var $bgobj = $(this);
+	  $(window).scroll(function() {
+	    var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
+	    var coords = 'center '+ yPos + 'px';
+	    $bgobj.css({ backgroundPosition: coords });
+	  });
+	});
+}
 
 wnd.resize(function(){
 	sizer();

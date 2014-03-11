@@ -83,7 +83,7 @@ body
 	font-size: 13px 
 	line-height: 1.4
 	color: #767676 
-	&.no-ipad
+	&.no-ios
 		.slider__item
 			position: relative !important
 		.slider__in
@@ -109,9 +109,9 @@ button, input, textarea
 .page_order
 	background: #FFF 
 .page_about
-	-webkit-background-size: auto
-	-o-background-size: auto
-	background-size: auto
+	-webkit-background-size: 100% auto
+	-o-background-size: 100% auto
+	background-size: 100% auto
 	background-position: 50% 0 
 .page__main
 	background-size: auto 100%
@@ -269,7 +269,11 @@ button, input, textarea
 .slider__item
 	width: 1000px
 	height: 768px 
-	+cover
+	-webkit-background-size: contain
+	-o-background-size: contain
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: 50% 50% 
 .slider__prev, .slider__next
 	position: absolute
 	top: 0
